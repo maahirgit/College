@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE Library [
+<!ELEMENT Library (#PCDATA | book)*>
+<!ELEMENT book (#PCDATA)>	
+]>	
+	
+	<Library> GLS Library
+		<book>Introduction to XML</book>	
+	</Library>

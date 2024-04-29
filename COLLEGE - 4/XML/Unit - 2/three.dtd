@@ -1,0 +1,10 @@
+<!ELEMENT OrderDetail (Order_Detail+)>
+<!ELEMENT Order_Detail (OrderNumber,OrderRate,OrderAmount,item+)>
+<!ATTLIST Order_Detail orderdate CDATA #REQUIRED>
+<!ELEMENT OrderNumber (#PCDATA)>
+<!ELEMENT OrderRate (#PCDATA)>
+<!ELEMENT OrderAmount (#PCDATA)>
+<!ELEMENT item (ItemPrice*,ItemName?,Quantity*)>
+<!ELEMENT ItemPrice (#PCDATA)>
+<!ELEMENT ItemName+ (#PCDATA)>
+<!ELEMENT Quantity (#PCDATA)>

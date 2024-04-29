@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function h1(){
+            document.getElementById('heading').style.color="aqua";
+        }
+        function fname(){
+            document.getElementById('demo').innerHTML="Please enter in capital letters"
+        }
+    </script>
+    <h1 onmouseover="h1()" id="heading">STUDENT DETAIL FORM</h1>
+    <form action="">
+        <label for="" onmouseover="fname()">First name</label>
+        <input type="text" onmouseover="fname()"><br>
+        <label for="" onmouseover="fname()">last name</label>
+        <input type="text" onmouseover="fname()"><br>
+        <label for="" onmouseover="fname()">Address</label>
+        <input type="text" onmouseover="fname()"><br>
+        <label for="" onmouseover="fname()">Phone number</label>
+        <input type="text" onmouseover="fname()">
+        <p id="demo"></p>
+    </form>
+</body>
+</html>

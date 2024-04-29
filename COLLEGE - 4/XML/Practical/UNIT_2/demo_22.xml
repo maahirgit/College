@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE student_info [
+	<!ELEMENT student_info       (subject+, student+)>
+	<!ELEMENT subject    (name)>
+	<!ATTLIST subject     subjectID  ID  #REQUIRED>
+	<!ELEMENT student     (#PCDATA)>
+	<!ATTLIST student     whichsubject IDREF   #IMPLIED>
+	<!ELEMENT name        (#PCDATA)>
+
+]>
+
+<student_info>
+	<subject subjectID="s1">
+		<name> science </name>
+	</subject>
+	<subject subjectID="s2">
+		<name> math </name>
+	</subject>
+
+
+	<student whichsubject ="s1">
+		Mital Patel
+	</student>
+	<student whichsubject ="s2">
+		Rakesh Patel
+	</student>
+	<student whichsubject ="s2">
+		Akash Patel
+	</student>
+</student_info>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BOOKS SYSTEM "demo_5.dtd">
+
+<BOOKS>
+	<BOOK>
+		<BOOK_TITLE> LOOK Homeward, Angle </BOOK_TITLE>
+		<AUTHOR> Wolfe, Thomas </AUTHOR>
+		<AUTHOR> ATUAL </AUTHOR>
+		<PUBYEAR>2010</PUBYEAR>
+	</BOOK>	
+
+	<BOOK>
+		<BOOK_TITLE> Gravity's Rainbow </BOOK_TITLE>
+		<AUTHOR> Pyncon, Thomas </AUTHOR>
+		<PUBYEAR>2005</PUBYEAR>
+	</BOOK>		
+
+	<BOOK>
+		<BOOK_TITLE> Computer Network </BOOK_TITLE>
+		<AUTHOR> Taneabaum, Andrew </AUTHOR>
+		
+	</BOOK>	
+</BOOKS>

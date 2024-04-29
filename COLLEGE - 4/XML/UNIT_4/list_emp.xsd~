@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		
+	<xsd:element name="emp_no" type="five_list"/>
+		<xsd:simpleType name="five_list">
+			<xsd:simpleType>
+					<xsd:restriction base="emp_list">
+					</xsd:restriction>
+			</xsd:simpleType>
+
+			<xsd:simpleType name="emp_list">
+				<xsd:list itemType="xsd:int"/>
+			</xsd:simpleType>
+			
+		</xsd:simpleType>
+</xsd:schema>

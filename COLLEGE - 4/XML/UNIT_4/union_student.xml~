@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BOOK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="book_FACET.xsd">
+
+	<TITLE> Web technologies </TITLE>
+	<AUTHOR> Patel Godbole </AUTHOR>
+	<PUBLISHER> TMH	</PUBLISHER>
+	<PRICE> 250 </PRICE>
+	<PUB_YEAR> 2010 </PUB_YEAR>
+</BOOK>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="STUDENT_RESULT" type="StudentType"/>
+		<xsd:complexType name="StudentType">
+			<xsd:sequence>
+				<xsd:element name="ROLL_NUMBER" type="xsd:integer"/>
+				<xsd:element name="NAME" type="xsd:string"/>
+				<xsd:element name="MARKS" type="xsd:integer"/>
+				<xsd:element name="RESULT">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element name="PASS" type="xsd:string"/>
+							<xsd:element name="FAIL" type="xsd:string"/>
+						</xsd:choice>
+					</xsd:complexType>		
+				</xsd:element>
+
+			</xsd:sequence>
+		</xsd:complexType>
+</xsd:schema>

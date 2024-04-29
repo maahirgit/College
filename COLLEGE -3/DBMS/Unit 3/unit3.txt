@@ -1,0 +1,76 @@
+CREATE TABLE DEPARTMENT (
+    Department_ID INT ,
+    Name VARCHAR(50) NOT NULL,
+    Regional_Group VARCHAR(50) NOT NULL
+);
+CREATE TABLE DESIGNATION (
+    Job_ID INT,
+    Fun VARCHAR(50) NOT NULL
+);
+
+INSERT INTO DEPARTMENT (Department_ID, Name, Regional_Group)
+VALUES 
+    (10, 'ACCOUNTING', 'NEW YORK'),
+    (20, 'RESEARCH', 'DALLAS'),
+    (30, 'SALES', 'CHICAGO'),
+    (40, 'OPERATIONS', 'BOSTON');
+    
+    INSERT INTO DESIGNATION (Job_ID, Fun)
+VALUES 
+    (667, 'CLERK'),
+    (668, 'STAFF'),
+    (669, 'ANALYST'),
+    (670, 'SALESPERSON'),
+    (671, 'MANAGER'),
+    (672, 'PRESIDENT');
+
+
+select * from DESIGNATION;
+select * from DEPARTMENT;
+
+CREATE TABLE EMPLOYEE (Emp_ID int,Fname VARCHAR(50),Lname VARCHAR(50),job_id int,Manager_ID int,Hire_Date date,Salary int,Department_ID int);
+INSERT INTO EMPLOYEE (Emp_ID, Fname, Lname, job_id, Manager_ID, Hire_Date, Salary, Department_ID)
+VALUES 
+    (1, 'SMITH', 'JOHN', 667, 7902, '19841217', 800, 20),
+    (2, 'ALLEN', 'KEVIN', 670, 7698, '19850220', 1600, 30),
+    (3, 'DOYLE', 'JEAN', 668, 7839, '19850404', 2850, 30),
+    (4, 'DENNIS', 'LYNN', 671, 7839,'19850515', 2750, 30),
+    (5, 'BAKER', 'LESLIE', 671, 7839,'19850610', 2200, 40),
+    (6, 'WARK', 'CYNTHIA', 670, 7698, '19850222', 1250, 30);
+select * from EMPLOYEE;
+
+select Regional_Group from DEPARTMENT;
+select Fname,Lname,salary from EMPLOYEE;
+alter table employee rename column Emp_ID to Id_Of_Employee;
+select Id_Of_Employee,Lname,Department_ID from EMPLOYEE;
+select Fname,salary from EMPLOYEE;
+select * from EMPLOYEE where Fname='SMITH';
+select * from EMPLOYEE where Department_ID=20;
+select * from EMPLOYEE where salary between 3000 and 4500;
+select * from EMPLOYEE where Department_ID = 20 or Department_ID = 30;
+select * from EMPLOYEE where Fname like 'D%';
+select Id_Of_Employee,Lname from EMPLOYEE order by Id_Of_Employee;
+select salary Emp_salary from EMPLOYEE order by 1 desc;
+select max(salary) from EMPLOYEE;
+select avg(salary) "total_amt" from EMPLOYEE;
+update EMPLOYEE set Fname="Revita" where Id_Of_Employee=6;
+select * from EMPLOYEE;
+select count(*) from EMPLOYEE where salary>=1600;
+alter table EMPLOYEE add column city VARCHAR(50);
+select count(*) from employee where Fname like '%N';
+select Fun from DESIGNATION where job_id=669;
+select * from employee having salary > (select avg(salary) from EMPLOYEE);
+
+select * from DEPARTMENT;
+select * from DESIGNATION;
+select * from EMPLOYEE;
+
+select * from employee having salary = (select max(salary) from employee);
+select * from employee where Department_ID in (select Department_ID from DEPARTMENT where Name="RESEARCH");
+select count(*) from employee where Department_ID in (select Department_ID from DEPARTMENT where Name="SALES");
+select salary+((salary*15)/100) from employee where Job_ID in (select Job_ID from DESIGNATION where Fun="STAFF");
+
+select * from employee natural join DESIGNATION;
+
+
+Select max(salary) from employee where salary < (select max(salary) from employee) ;

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" ref="customer.xsl"?>
+<portfolio>
+	<stock exchange="nyse">
+		<name>ABCD</name>
+		<symbol>AD</symbol>
+		<price>235</price>
+	</stock>
+	
+	<stock exchange="nasdaq">
+		<name>EFGH</name>
+		<symbol>EH</symbol>
+		<price>569</price>
+	</stock>
+
+	<stock exchange="nasdaq">
+		<name>IJKL</name>
+		<symbol>IL</symbol>
+		<price>236</price>
+	</stock>
+
+	<stock exchange="nasdaq">
+		<name>DFAD</name>
+		<symbol>RT</symbol>
+		<price>200</price>
+	</stock>
+
+	<stock exchange="nasdaq">
+		<name>ERETT</name>
+		<symbol>IH</symbol>
+		<price>259</price>
+	</stock>	
+</portfolio>
+

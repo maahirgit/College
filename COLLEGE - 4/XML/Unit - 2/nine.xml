@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Letter [
+	<!ELEMENT Letter (contact+,salutation,paragraph,closing,signature)>
+	<!ELEMENT contact (name,address,city,pin,state,flag)>
+	<!ATTLIST contact type CDATA #FIXED "sender">
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT address (#PCDATA)>
+	<!ELEMENT city (#PCDATA)>
+	<!ELEMENT pin (#PCDATA)>
+	<!ELEMENT state (#PCDATA)>
+	<!ELEMENT flag EMPTY>
+	<!ATTLIST flag gender (male|female) "male">
+	<!ELEMENT salutation (#PCDATA)>
+	<!ELEMENT paragraph (#PCDATA)>
+	<!ELEMENT closing (#PCDATA)>
+	<!ELEMENT signature (#PCDATA)>
+]>
+<Letter>
+	<contact type="sender">
+		<name>Maahir</name>
+		<address>23,bnsh</address>
+		<city>Ahmedabad</city>
+		<pin>280005</pin>
+		<state>Nepal</state>
+		<flag gender="male"></flag>
+	</contact>
+	<salutation>kmdxojdo xnsilj lxni</salutation>
+	<paragraph>dnawjd xhihdi xjishi</paragraph>
+	<closing>abc</closing>
+	<signature>m@@hir</signature>
+</Letter>

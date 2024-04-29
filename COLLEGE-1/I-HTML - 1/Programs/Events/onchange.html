@@ -1,0 +1,52 @@
+<html>
+<body>
+
+<p>Select a new car from the list.</p>
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="Audi">Audi
+  <option value="BMW">BMW
+  <option value="Mercedes">Mercedes
+  <option value="Volvo">Volvo
+</select>
+
+<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("mySelect").value;
+    document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+</script>
+
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function stay(){
+    var x= document.getElementById("mySelect").value;
+    document.getElementById("demo").innerHTML="I live in :"+ x;
+    }
+  </script>
+    <select  id="mySelect">
+      <option value="Select">--Select--</option>
+      <option value="Ahmedabad">Ahmedabad</option>
+      <option value="Rajasthan">Rajasthan</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Delhi">Delhi</option>
+    </select>
+    <input type="submit" value="Submit" onclick="stay()">
+    <p id="demo"></p>
+  
+</body>
+</html> -->

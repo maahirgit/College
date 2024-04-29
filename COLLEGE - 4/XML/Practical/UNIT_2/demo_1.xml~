@@ -1,0 +1,8 @@
+<?xml version=”1.0”?>
+<!DOCTYPE myBook [ 
+<!ELEMENT book_name (#PCDATA) >
+]>
+
+<myBook>
+<book_name> XML </book_name>
+</myBook>

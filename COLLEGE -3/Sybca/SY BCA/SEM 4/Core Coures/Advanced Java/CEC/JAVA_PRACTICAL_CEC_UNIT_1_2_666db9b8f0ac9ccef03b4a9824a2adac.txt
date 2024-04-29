@@ -1,0 +1,15 @@
+UNIT - 1 - CEC
+
+1. Write a java program that will write small alphabet a to z and display using FileOutputStream class and display the same using FileInputStream class.
+
+2. Create two dat file named t1.dat and t2.dat Write a java programme to read both file using SequenceInputStream and display the content of both files.
+
+
+
+UNIT - 2 - CEC
+
+1. Write a java programme which store the employee id, employee name using HasMap. Write the code to display the employee details.
+
+2. Write a java programme that will store bank details like bank name and bank branch name using treemap. Display the bank details of record number 2 and also display all the records.
+
+

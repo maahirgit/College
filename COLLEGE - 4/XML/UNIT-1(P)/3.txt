@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Orderdetail>
+    <Ordernumber>10410</Ordernumber>
+    <Orderdate>2024-08-12</Orderdate>
+    <Orderamount>600</Orderamount>
+    <Item>
+    <Itemprice>20</Itemprice>
+    <Itemname>Pen</Itemname>
+    <Quantity>30</Quantity>
+    </Item>
+</Orderdetail>

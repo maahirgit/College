@@ -1,0 +1,309 @@
+----------------------------------------------------------------------------------------------------------
+<Q1>
+
+<!-- component.html -->
+
+<p>Hello, {{name}}!</p>
+
+// component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-component',
+  templateUrl: './component.html',
+  styleUrls: ['./component.css']
+})
+export class MyComponent {
+  name = 'John';
+}
+
+<!-- rendered output -->
+
+<p>Hello, John!</p>
+
+----------------------------------------------------------------------------------------------------------
+<Q2>
+
+<!-- component.html -->
+
+<button (click)="onClick()">Click me</button>
+<p>The square of 10 is {{result}}</p>
+
+// component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-component',
+  templateUrl: './component.html',
+  styleUrls: ['./component.css']
+})
+export class MyComponent {
+  result = 0;
+
+  onClick() {
+    this.result = 10 * 10;
+  }
+}
+
+<!-- rendered output -->
+
+<button (click)="onClick()">Click me</button>
+<p>The square of 10 is 100</p>
+
+----------------------------------------------------------------------------------------------------------
+<Q3>
+
+<!-- component.html -->
+
+<button (click)="increment()">Click me</button>
+<p>The counter value is {{counter}}</p>
+
+// component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-component',
+  templateUrl: './component.html',
+  styleUrls: ['./component.css']
+})
+export class MyComponent {
+  counter = 0;
+
+  increment() {
+    this.counter++;
+  }
+}
+
+<!-- rendered output -->
+
+<button (click)="increment()">Click me</button>
+<p>The counter value is 1</p>
+
+----------------------------------------------------------------------------------------------------------
+<Q4>
+
+<!-- component.html -->
+
+<div (mousemove)="increment()">Move your mouse here!</div>
+<p>The counter value is {{counter}}</p>
+
+// component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-component',
+  templateUrl: './component.html',
+  styleUrls: ['./component.css']
+})
+export class MyComponent {
+  counter = 0;
+
+  increment() {
+    this.counter++;
+  }
+}
+
+<!-- rendered output -->
+
+<div (mousemove)="increment()">Move your mouse here!</div>
+<p>The counter value is 1</p>
+
+----------------------------------------------------------------------------------------------------------
+<Q5>
+
+<!-- component.html -->
+
+<select (change)="selectColor($event.target.value)">
+  <option value="">Select a color</option>
+  <option value="red">Red</option>
+  <option value="green">Green</option>
+  <option value="blue">Blue</option>
+</select>
+<p *ngIf="selectedColor">You selected {{selectedColor}}</p>
+
+// component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-component',
+  templateUrl: './component.html',
+  styleUrls: ['./component.css']
+})
+export class MyComponent {
+  selectedColor: string;
+
+  selectColor(color: string) {
+    this.selectedColor = color;
+  }
+}
+
+<!-- rendered output -->
+
+<select (change)="selectColor($event.target.value)">
+  <option value="">Select a color</option>
+  <option value="red">Red</option>
+  <option value="green">Green</option>
+  <option value="blue">Blue</option>
+</select>
+<p>You selected Green</p>
+
+----------------------------------------------------------------------------------------------------------
+<Q6>
+
+<!-- component.html -->
+
+<input (keyup)="onKey($event)">
+<p *ngIf="typedText">You typed: {{typedText}}</p>
+
+// component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-component',
+  templateUrl: './component.html',
+  styleUrls: ['./component.css']
+})
+export class MyComponent {
+  typedText: string;
+
+  onKey(event: any) {
+    this.typedText = event.target.value;
+  }
+}
+
+<!-- rendered output -->
+
+<input (keyup)="onKey($event)">
+<p>You typed: Hello World</p>
+
+----------------------------------------------------------------------------------------------------------
+<Q7>
+
+<!-- component.html -->
+
+<button (click)="showImage()">Show Image</button>
+<img *ngIf="showingImage" src="path/to/image.png" alt="An image">
+
+// component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-component',
+  templateUrl: './component.html',
+  styleUrls: ['./component.css']
+})
+export class MyComponent {
+  showingImage = false;
+
+  showImage() {
+    this.showingImage = true;
+  }
+}
+
+<!-- rendered output -->
+
+<button (click)="showImage()">Show Image</button>
+<img src="path/to/image.png" alt="An image">
+
+----------------------------------------------------------------------------------------------------------
+<Q8>
+
+<!-- component.html -->
+
+<button (click)="changeColor()">Change Color</button>
+<label [style.background-color]="labelColor">This is a label</label>
+
+// component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-component',
+  templateUrl: './component.html',
+  styleUrls: ['./component.css']
+})
+export class MyComponent {
+  labelColor = 'white';
+
+  changeColor() {
+    this.labelColor = 'green';
+  }
+}
+
+<!-- rendered output -->
+
+<button (click)="changeColor()">Change Color</button>
+<label style="background-color: green;">This is a label</label>
+
+----------------------------------------------------------------------------------------------------------
+<Q9>
+
+<!-- component.html -->
+
+<select [(ngModel)]="selectedColor">
+  <option value="">Select a color</option>
+  <option value="red">Red</option>
+  <option value="green">Green</option>
+  <option value="blue">Blue</option>
+</select>
+<p *ngIf="selectedColor">You selected {{selectedColor}}.</p>
+
+// component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-component',
+  templateUrl: './component.html',
+  styleUrls: ['./component.css']
+})
+export class MyComponent {
+  selectedColor = '';
+}
+
+<!-- rendered output -->
+
+<select>
+  <option value="">Select a color</option>
+  <option value="red">Red</option>
+  <option value="green" selected>Green</option>
+  <option value="blue">Blue</option>
+</select>
+<p>You selected Green.</p>
+
+----------------------------------------------------------------------------------------------------------
+<Q10>
+
+<!-- component.html -->
+
+<label (mousemove)="changeColor()" [style.background-color]="labelColor">This is a label</label>
+
+// component.ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-component',
+  templateUrl: './component.html',
+  styleUrls: ['./component.css']
+})
+export class MyComponent {
+  labelColor = 'white';
+
+  changeColor() {
+    this.labelColor = 'yellow';
+  }
+}
+
+<!-- rendered output -->
+
+<label style="background-color: yellow;">This is a label</label>
+
+----------------------------------------------------------------------------------------------------------

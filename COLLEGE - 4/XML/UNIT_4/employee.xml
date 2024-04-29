@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EMPLOYEE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="employee.xsd">
+
+	<EMP_NO> 120 </EMP_NO>
+	<EMP_NAME> Atul Kahate </EMP_NAME>
+	<DESIGNATION> Consultant </DESIGNATION>
+	<SALARY> 10000 </SALARY>
+</EMPLOYEE>

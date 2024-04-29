@@ -1,0 +1,44 @@
+program is a set of instructions 
+
+job is a sequence of single program
+
+more than one program of single user is called task
+
+when program is ready for execution it is called as process
+
+program is passiv or static
+
+process is active or dynamic
+
+program whose execution overlap is 
+called as concurrent process
+It also means multiple process running at a time for better performance
+
+process is created in new state and stored
+in systems job pool/queue
+
+the process changing its state is called as state transition
+
+the process can change state when there is an event
+
+the swapped out process is known as suspended process and it is called suspended queue
+
+process control block is created 
+when new process is created and deleted
+as it terminates
+
+Cpu register is used for execution of process
+
+long term schedular is used to bring process from job pool to ready queue
+
+short term schedular is invoked every time to select another process
+if there is interrupt in running process
+
+medium term schedulars to swap values from blocked processes
+
+waiting time = completion time - Arrival time - execution time
+
+Turn around time = waiting time + execution time
+
+the fore and the first thing in the protocol is to identify the critical section
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl"?>
+<customers>
+	<customer>
+		<name>Rajesh</name>
+		<address>satellite</address>
+		<state>gujarat</state>
+		<phone>(01)-12539868</phone>
+	</customer>
+
+	<customer>
+		<name>Pankaj</name>
+		<address>Bopal</address>
+		<state>Rajasthan</state>
+		<phone>(23)-89635975</phone>
+	</customer>
+
+	<customer>
+		<name>Darshna</name>
+		<address>Sahibag</address>
+		<state>Bihar</state>
+		<phone>3658795</phone>
+	</customer>
+
+	<customer>
+		<name>Bindi</name>
+		<address>Ranip</address>
+		<state>Karnataka</state>
+		<phone>(36)-2539856</phone>
+	</customer>
+	
+
+</customers>
+

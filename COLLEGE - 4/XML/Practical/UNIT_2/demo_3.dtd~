@@ -1,0 +1,14 @@
+<!ELEMENT address (street, region, postal-code, locality, country) >
+<!ELEMENT street (#PCDATA) >
+<!ELEMENT region (#PCDATA) >
+<!ELEMENT postal-code (#PCDATA) >
+<!ELEMENT locality (#PCDATA) >
+<!ELEMENT country (#PCDATA) >
+
+<address>
+	<street> Stree 1 </street>
+	<region> law garden </region>
+	<postal-code> 380006 </postal-code>
+	<locality> Ellisbridge</locality>
+	<country>India</country>
+</address>

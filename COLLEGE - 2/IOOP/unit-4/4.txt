@@ -1,0 +1,16 @@
+***Header files of c++***
+there are two types standard library and udf header files
+1 iostream
+2 strcpy()
+3 strlen()
+4 strcmp()
+5 strcat()
+6 math.h
+7 cos()
+8 sqrt()
+9 sin()
+10 pow()
+11 isalpha()
+12 isblank()
+13 iscntrl()
+14 id

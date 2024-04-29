@@ -1,0 +1,72 @@
+1) create table employee(E_Id int(5),Name varchar(20),Age int(3),Address varchar(20),Join_date date,Leave_date date,salary int(10));
+insert into employee values(101,'Akshay',22,'Ahmedabad','20150622','20220830',22000);
+insert into employee values(102,'Deep',24,'Surat','20170312','20210522',25000);
+insert into employee values(103,'Nisha',26,'Delhi','20150422','20200715',27000);
+insert into employee values(104,'Bhavik',20,'Ahmedabad','20170510','20220623',21000);
+insert into employee values(105,'Shanaya',27,'Chandigarh','20100612','20220530',28000);
+insert into employee values(106,'Prisha',29,'Ahmedabad','20100722','20210612',30000);
+
+-- String
+-- select length(name),length(Address) from employee;
+-- select lower(Address) from employee;
+-- select substring(Name,1,4) from employee;
+-- select substring(Name,-4) from employee;
+-- select substring(Name,2,4) from employee;
+-- select name from employee union select Address from employee;
+-- select name,replace(name,"ana","aa") from employee;
+-- select reverse(name),reverse(address) from employee;
+-- select ascii(name) from employee;
+-- select instr(name,'a') from employee;
+-- select * from employee order by name asc;
+-- select * from employee order by address desc;
+
+-- Math
+-- select max(salary),min(salary),avg(salary),sum(salary) from employee;
+-- select mod(age,2) from employee;
+-- select distinct ceil(10.7),floor(10.7),round(10.7) from employee;
+-- select rand();
+-- select count(*) from employee;
+-- select pow(salary,2) from employee;
+-- select distinct sqrt(100) from employee;
+-- select distinct greatest(100,200,50,500) from employee;
+-- select distinct least(100,200,50,500) from employee;
+-- select pi() from employee;
+-- select cos(1) from employee;
+-- select sin(90) from employee;
+
+-- Date
+-- select date_format(Join_date,"%Y") from employee;
+-- select date_format(Join_date,"%y") from employee;
+-- select date_format(Join_date,"%b") from employee;
+-- select date_format(Join_date,"%c") from employee;
+-- select date_format(Join_date,"%M") from employee;
+-- select date_format(Join_date,"%D") from employee;
+-- select date_format(Join_date,"%a") from employee;
+-- select date_format(Join_date,"%W") from employee;
+-- select date_format(Join_date,"%T") from employee;
+-- select date_format(Join_date,"%H") from employee;
+-- select date_format(Join_date,"%i") from employee;
+-- select date_format(Join_date,"%S") from employee;
+-- select date_format(Join_date,"%e") from employee;
+-- select date_format(Join_date,"%U") from employee;
+
+-- select sysdate() from employee;
+-- select now();
+-- select curdate();
+
+-- select join_date,adddate(join_date,1) from employee;
+-- select adddate("2023-08-05 09:14:37",INTERVAL 15 MINUTE);
+-- select adddate("2023-08-05 09:14:37",INTERVAL -2 Month);
+-- select adddate("2023-08-05 09:14:37",INTERVAL 15 day);
+-- select datediff(Leave_date,join_date) from employee;
+-- select day("2023-08-15");
+-- select day(curdate());
+-- select dayname(curdate());
+-- select dayofweek(curdate());
+-- select dayofyear(curdate());
+-- select extract(Year_month from curdate());
+-- Month,day,week,year,quarter
+-- select timestampdiff(day,join_date,Leave_date) from employee;
+-- Month,day,week,year,quarter
+
+

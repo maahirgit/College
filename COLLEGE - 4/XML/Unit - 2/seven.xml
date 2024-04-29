@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Email SYSTEM "seven.dtd">
+<Email>
+	<from>abc</from>
+	<to>xyz</to>
+	<content>
+		<person>John Doe</person>
+		<exercises>
+			<exercise>
+				<topic>yoga</topic>
+				<discription>abc</discription>
+			</exercise>
+		</exercises>
+		<course>Bca</course>
+	</content>
+</Email>
+
+<!-- *: Specifies that the preceding element or group can occur zero or more times.
++: Specifies that the preceding element or group must occur one or more times.
+?: Specifies that the preceding element or group can occur zero or one time -->

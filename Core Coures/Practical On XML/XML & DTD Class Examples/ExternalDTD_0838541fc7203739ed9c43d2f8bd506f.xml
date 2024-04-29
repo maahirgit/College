@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+	<!--External DTD-->
+<!DOCTYPE student SYSTEM "type1.dtd">
+
+
+	<student>
+			<name>Amit</name>
+			<course>BCA</course>
+			<result>Pass</result>
+			<result>Pass</result>
+			<per>75</per>
+								
+		</student>

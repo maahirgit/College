@@ -1,0 +1,20 @@
+<html>
+<body>
+<form name = "frm">
+Enter your name: <input type="text" id="fname" name = "fn" onblur="myFunction()">
+</form>
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function myFunction() {
+    //var x = document.getElementById("fname");
+     //x.value = x.value.toUpperCase();
+    var x = document.frm.fn;
+    x.value = x.value.toUpperCase();
+    
+   
+}
+</script>
+
+</body>
+</html>

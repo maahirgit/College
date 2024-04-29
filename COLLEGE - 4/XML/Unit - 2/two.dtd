@@ -1,0 +1,5 @@
+<!ELEMENT email (message)>
+<!ELEMENT message (#PCDATA)>
+<!ATTLIST message from CDATA #REQUIRED>
+<!ATTLIST message to CDATA #REQUIRED>
+<!ATTLIST message subject CDATA #REQUIRED>

@@ -1,0 +1,302 @@
+			SET FOREGROUND AND BACKGROUND
+
+import java.awt.*;
+import java.applet.*;
+public class Applet3_1 extends Applet{
+    
+    public void paint(Graphics g){
+        setForeground(Color.red);
+         setBackground(Color.blue);
+        g.drawString("Hello Java ",50,50);
+    }
+}
+/*<applet code="Applet3_1.class" width="500" height="600">
+    </applet>*/
+
+
+
+-------------------------------------------
+
+			DRAW RECTANGLE AND SQUARE
+
+import java.applet.*;
+import java.awt.*;
+public class Applet5_1 extends Applet{
+    public void paint(Graphics g){
+        g.drawRect(10,10,70,70)
+        g.drawRoundRect(10,20,30,40,50,50);
+        g.setColor(Color.green);
+        g.fillRect(10,10,70,70);
+        g.setColor(Color.blue);
+        g.fillRoundRect(10,10,70,70,50,50);
+        g.setColor(Color.red);
+    }
+}
+
+/*<applet code="Applet5_1.class" width="500" height="600">
+    </applet>*/
+
+------------------------------------------------------------------
+
+			 DRAW OVAL AND CIRCLE
+
+import java.applet.*;
+import java.awt.*;
+public class Applet5_2 extends Applet{
+    public void paint(Graphics g){
+        g.setColor(Color.black);
+        g.drawOval(50,50,200,200);
+        g.setColor(Color.blue);
+        g.fillOval(50,50,200,200);
+        g.drawArc(100,150,100,80,0,180);
+        g.fillArc(100,150,100,80,0,180);
+    }
+}
+
+/*<applet code="Applet5_2.class" width="500" height="600">
+    </applet>*/
+
+
+-------------------------------------------------------------------------
+
+				SMILY
+
+import java.applet.*;
+import java.awt.*;
+public class Applet8 extends Applet{
+
+    public void paint(Graphics g) {
+        // Draw the face (circle)
+        g.setColor(Color.yellow);
+        g.fillOval(50, 50, 200, 200);
+
+        // Draw the eyes (circles)
+        g.setColor(Color.black);
+        g.fillOval(100, 100, 50, 50); // Left eye
+        g.fillOval(150, 100, 50, 50); // Right eye
+
+        // Draw the mouth (arc)
+        g.drawArc(100, 150, 100, 80, 0, -180); // Smily face
+
+        // Uncomment the line below to draw a smiling face
+        // g.drawArc(100, 150, 100, 80, 0, 180); // Sad face
+    }
+}
+
+/*<applet code="Applet8.class" width="500" height="600">
+    </applet>*/
+
+
+--------------------------------------------------------------------------
+
+				FLAG
+
+
+import java.awt.*;
+import java.applet.*;
+
+public class Applet9 extends Applet {
+    public void paint(Graphics g) {
+        // Set background color to white
+        setBackground(Color.white);
+
+        // Draw the flag rectangle (proportions: 2:3)
+        g.setColor(Color.orange);
+        g.fillRect(10, 10, 70, 10);
+
+               // Draw the green portion of the flag
+        g.setColor(Color.green);
+        g.fillRect(10, 30, 70, 10);
+
+        // Draw the white portion of the flag
+        g.setColor(Color.blue);
+        g.fillRect(10, 20, 70, 10);
+
+        // g.setColor(Color.black);
+        // g.drawLine(98,50,98,500);
+    }
+}
+
+/*<applet code="Applet9.class" width="500" height="600">
+    </applet>*/
+
+------------------------------------------------------------------
+
+			CHECK BOX
+
+import java.awt.*;
+import javax.swing.*;
+public class Applet_CB extends JApplet{
+    public void init(){
+        Container cntnr=getContentPane();
+        cntnr.setLayout(new FlowLayout(FlowLayout.LEFT));
+        JLabel label1=new JLabel("Select the Fruit : ");
+        JCheckBox jcb0=new JCheckBox("Mango");
+        JCheckBox jcb1=new JCheckBox("Kiwi");
+        JCheckBox jcb2=new JCheckBox("Apple");
+        cntnr.add(label1);
+        cntnr.add(jcb0);
+        cntnr.add(jcb1);
+        cntnr.add(jcb2);
+
+    }
+}
+/*<applet code="Applet_CB.class" width="500" height="600">
+    </applet>*/
+
+----------------------------------------------------------------------------
+
+			COMBO BOX
+
+
+import java.awt.*;
+import javax.swing.*;
+public class Applet_combo extends JApplet{
+    public void init(){
+        String mn_name[]={"jan","Feb","March","April","May","June","July","Aug","Sep","Oct","Nov","Dec"};
+        Container Cntnr=getContentPane();
+        Cntnr.setLayout(new FlowLayout(FlowLayout.LEFT));
+        JLabel label1=new JLabel("Select the Month : ");
+        JComboBox month=new JComboBox();
+        for(int i=0;i<mn_name.length;i++){
+            month.addItem(mn_name[i]);
+        }
+        Cntnr.add(label1);
+        Cntnr.add(month);
+    }
+}
+/* <applet code="Applet_combo.class" width="500" height="600">
+    </applet>*/
+
+--------------------------------------------------------------------------
+			TEXT FIELD
+
+
+import java.awt.*;
+import javax.swing.*;
+public class Applet_control extends JApplet{
+    public void init(){
+        Container Cntnr=getContentPane();
+        Cntnr.setLayout(new FlowLayout(FlowLayout.LEFT));
+        JLabel label1=new JLabel("Enter Your Name : ",JLabel.RIGHT);
+        JTextField jtf=new JTextField(15);
+        JButton btn=new JButton("Apply");
+        Cntnr.add(label1);
+        Cntnr.add(jtf);
+        Cntnr.add(btn);
+    }
+}
+/*<applet code="Applet_control.class" width="500" height="600">
+    </applet>*/
+
+-------------------------------------------------------------------------------
+
+			RADIO BUTTON
+
+import java.awt.*;
+// import java.applet
+import javax.swing.*;
+public class Applet_RB extends JApplet{
+    public void init(){
+        Container Cntnr=getContentPane();
+        Cntnr.setLayout(new FlowLayout(FlowLayout.LEFT));
+        JLabel label1=new JLabel("Select the Fruit : ");
+        ButtonGroup bg=new ButtonGroup();
+        JRadioButton rb1=new JRadioButton("Apple");
+        JRadioButton rb2=new JRadioButton("Banana");
+        JRadioButton rb3=new JRadioButton("Kiwi");
+        Cntnr.add(label1);
+        Cntnr.add(rb1);
+        Cntnr.add(rb2);
+        Cntnr.add(rb3);
+        bg.add(rb1);
+        bg.add(rb2);
+        bg.add(rb3);
+    }
+}
+/*<applet code="Applet_RB.class" width="500" height="600">
+    </applet>*/
+
+
+-------------------------------------------------------------------------
+
+				TEXT AREA
+
+import java.awt.*;
+import javax.swing.*;
+public class Applet_TA extends JApplet{
+    public void init(){
+        Container Cntnr=getContentPane();
+        Cntnr.setLayout(new FlowLayout(FlowLayout.LEFT));
+        JLabel label1=new JLabel("Enter your Address : ",JLabel.RIGHT);
+        JTextArea TA=new JTextArea("Ahmedabad",5,30);
+        JButton btn=new JButton("Apply");
+        Cntnr.add(label1);
+        Cntnr.add(TA);
+        Cntnr.add(btn);
+    }
+}
+/* <applet code="Applet_TA.class" width="500" height="600">
+    </applet>*/
+
+
+------------------------------------------------------------------------------
+
+				STRING 
+
+/*<applet code="Applet1.class" width="500" height="600">
+    </applet>*/
+import java.awt.*;
+import java.applet.*;
+public class Applet1 extends Applet{
+    String msg=" ";
+    public void init(){
+        msg="Hello SYBCA";
+    }
+    public void start(){
+        msg=msg+",welcome to Applet ";
+    }
+    public void paint(Graphics g){
+        g.drawString(msg,50,100);
+    }
+}
+
+
+--------------------------------------------------------------------------------
+
+				IMAGE
+
+/*<applet code="Applet6.class" width="500" height="600">
+    </applet>*/
+import java.applet.*;
+import java.awt.*;
+public class Applet6 extends Applet{
+    
+        Image picture;
+        public void init(){
+            picture=getImage(getCodeBase(),"a.jpg");
+        }
+        public void paint(Graphics g){
+            g.drawImage(picture,100,100,this);
+        }
+    }
+
+
+--------------------------------------------------------------------------------
+
+				GET URL
+
+import java.applet.*;
+import java.awt.*;
+public class Applet7 extends Applet{
+    public void paint(Graphics g){
+        g.drawString("GetCodeBase : "+getCodeBase(),20,20);
+        g.drawString("GetDocumentBase : "+getDocumentBase(),20,40);
+    }
+}
+/*<applet code="Applet7.class" width="500" height="600">
+    </applet>*/
+
+
+
+

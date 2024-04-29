@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Personalinfo>
+    <Rollno>AS78</Rollno>
+    <Name>Maahirr</Name>
+    <Address>
+        <Street>A420,xyz</Street>
+        <City>Ahmedabad</City>
+        <State>Rajasthan</State>
+    </Address>
+    <Mobile>9412385689</Mobile>
+    <Dob>2004-08-08</Dob>
+    <Age>80</Age>
+    <Qualification>Bca</Qualification>
+</Personalinfo>

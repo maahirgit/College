@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Student>
+    <Name>
+        <Firstname>Maahir</Firstname>
+        <Lastname>Shah</Lastname>
+    </Name>
+    <Id>101</Id>
+    <Plan>
+        <courses year="2022">
+            <Course>
+                <Name>Bca</Name>
+                <ShortName>It</ShortName>
+            	<Record>
+                      <Grade>A</Grade>
+                      <Date>2022-12-1</Date>
+            	</Record>
+            </Course>
+         </courses>
+    </Plan>
+</Student>

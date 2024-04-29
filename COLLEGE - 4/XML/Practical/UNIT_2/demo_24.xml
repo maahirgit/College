@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE LIST [
+	<!ELEMENT LIST (EMPLOYEE*)>
+	<!ELEMENT EMPLOYEE (#PCDATA)>
+	<!ATTLIST EMPLOYEE   marital_status (Married   | Single)  "Single">
+]>
+
+<LIST>
+	<EMPLOYEE marital_status="Married"> Rahul </EMPLOYEE>
+	<EMPLOYEE marital_status="Single"> Rahul </EMPLOYEE>
+	<EMPLOYEE marital_status="Married"> Rahul </EMPLOYEE>
+</LIST>

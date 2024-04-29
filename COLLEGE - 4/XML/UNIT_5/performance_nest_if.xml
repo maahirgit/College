@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl"?>
+<cricket>
+	<performance>
+		<player>sachin</player>
+		<runs>12000</runs>
+		<wickets>150</wickets>
+	</performance>
+
+	<performance>
+		<player>Rahul</player>
+		<runs>10000</runs>
+		<wickets>1</wickets>
+	</performance>
+
+	<performance>
+		<player>Anil</player>
+		<runs>2000</runs>
+		<wickets>500</wickets>
+	</performance>
+
+	<performance>
+		<player>Sourag</player>
+		<runs>10000</runs>
+		<wickets>120</wickets>
+	</performance>
+
+	<performance>
+		<player>Virender</player>
+		<runs>4000</runs>
+		<wickets>50</wickets>
+	</performance>
+</cricket>

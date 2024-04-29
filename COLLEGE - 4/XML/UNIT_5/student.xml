@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+	<student first_name="raju">
+		<id>101</id>
+		<remarks> A student who is not at all sincere! </remarks>
+	</student>
+
+	<student first_name="Aarati">
+		<id>102</id>
+		<remarks> A student who is really quite dedicated ! </remarks>
+	</student>
+
+	<student first_name="Rajani">
+		<id>103</id>
+		<remarks> A student who is awasom! </remarks>
+	</student>
+
+</students>

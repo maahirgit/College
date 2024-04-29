@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EMPLOYEE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="emp.xsd">
+
+	<NAME> Medha Pranjape </NAME>
+	
+	<PROJECT>
+		<NAME> Card Rewrite </NAME>	
+	</PROJECT>
+	<PROJECT>
+		<NAME> Electronic Bill Payments </NAME>	
+	</PROJECT>
+	<PROJECT>
+		<NAME> Work Flow Management </NAME>	
+	</PROJECT>
+	
+	<SUBORDINATES>
+		<NAME> Pankaj Patel </NAME>
+	</SUBORDINATES>
+
+	<DESIGNATION> Project Manager</DESIGNATION>
+	<SALARY> 100000 </SALARY>	
+
+</EMPLOYEE>

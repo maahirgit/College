@@ -1,0 +1,28 @@
+Revise for each loop
+
+●For the memory allocation of the object, new() method is used, so 
+the object is always allocated memory on the heap.
+
+●The Heap section contains Objects (may also contain 
+reference variables).
+●The Stack section of memory contains methods, local 
+variables, and reference variables.
+●The code section contains your bytecode.
+●The Static section contains Static data/methods.
+
+●Tracing garbage collector algorithm is also known as mark 
+and sweep collector.
+
+The garbage collector executes synchronously when the system 
+runs out of memory or asynchronously when the system is idle.
+●
+It can be invoked by System.gc() or Runtime.gc()
+
+The finalize() method in java.lang.Object class.
+
+●
+Vector is found in java.util package and implement the List 
+interface.
+
+Inheritance represents the IS-A relationship, also known as
+parent-child relationship.

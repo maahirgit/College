@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE personal_info SYSTEM "one.dtd">
+<personal_info>
+    <roll_no>1</roll_no>
+    <name>Maahir</name>
+    <address>abc--</address>
+    <mobile>7894561230</mobile>
+    <dob>01/01/2001</dob>
+    <age>20</age>
+    <qualification>Bca</qualification>
+</personal_info>

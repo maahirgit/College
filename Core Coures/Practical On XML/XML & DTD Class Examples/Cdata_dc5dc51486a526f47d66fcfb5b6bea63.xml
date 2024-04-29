@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+	<!DOCTYPE student [
+	<!ELEMENT student (name,course,total)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT course (#PCDATA)>
+	<!ELEMENT total (#PCDATA)>		
+]>
+	<student>
+		<![CDATA[
+		<name>Amit</name>
+		<course>BCA</course>
+		<total>450</total>
+		]]>
+	</student>

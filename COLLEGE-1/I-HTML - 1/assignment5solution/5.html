@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myfun(){
+            alert("Key is pressed");
+        }
+        function downfun(){
+            document.getElementById('demo').style.background= "red";
+        }
+        function upfun(x){
+            var x=document.getElementById('demo');
+            x.value=x.value.toUpperCase();
+            x.style.background= "yellow" ;
+            alert("key up");
+            // document.getElementById('demo').style.background="yellow";
+            // var x=document.f1.txt1;
+            // x.value=x.value.toUpperCase();
+        }
+    </script>
+    <form action="" name="f1">
+        <input type="text" id="demo" name="txt1" onkeypress="myfun()" onkeydown="downfun()" onkeyup="upfun(this)">
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Student [
+	<!ELEMENT Student (Roll_no,Name,Marks,Rank)>
+	<!ELEMENT Roll_no (#PCDATA)>
+	<!ELEMENT Name (#PCDATA)>
+	<!ELEMENT Marks (webtechnologies,XML,J2EE,NS)>
+	<!ELEMENT webtechnologies (#PCDATA)>
+	<!ELEMENT XML (#PCDATA)>
+	<!ELEMENT J2EE (#PCDATA)>
+	<!ELEMENT NS (#PCDATA)>
+	<!ELEMENT Rank (#PCDATA)>
+]>
+<Student>
+	<Roll_no>101</Roll_no>
+	<Name>Maahir</Name>
+	<Marks>
+		<webtechnologies>70</webtechnologies>
+		<XML>90</XML>
+		<J2EE>30</J2EE>
+		<NS>50</NS>
+	</Marks>
+	<Rank>4th</Rank>
+</Student>

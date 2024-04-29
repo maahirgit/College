@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE Email [
+<!ELEMENT Email (Message)>
+<!ELEMENT Message (#PCDATA)>	
+<!ATTLIST Message to CDATA  #IMPLIED>
+<!ATTLIST Message from CDATA #REQUIRED>
+<!ATTLIST Message sub CDATA #FIXED "Hows U">	
+]>
+	<Email>
+		
+		<Message from="cd" sub="Hows U">Hello</Message>
+	</Email>

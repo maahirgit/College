@@ -1,0 +1,55 @@
+create table Project_Details(Project_Id int(5) primary key,Project_Name varchar(20),Front_End varchar(20),Back_End varchar(20),ProjectDetail json);
+create table Employee_Details(E_id int(5) primary key,E_name varchar(20),Address varchar(20),Project_Id int(5),foreign key(Project_Id) references Project_Details (Project_Id));
+-- alter table Project_Details add foreign key (Project_Id) references Project_Details (Project_Id); 
+-- desc Employee_Details;
+
+insert into Project_Details(Project_Id,Project_Name,Front_End,Back_End,ProjectDetail)
+values(1,"Website designing","Wix","Html",'{"title":"Ecommerce","year":"2023","Duration":"2"}'),
+(2,"LMS","HTML","MYSQL",'{"year":"2021","title":"LMS","Duration":"5"}'),
+(3,"Doctor App","Java","XML",'{"year":"2020","title":"Doctor App","Duration":"5"}'),
+(4,"e-nursery","ABC","EFG",'{"year":"2015","title":"e-nursery","Duration":"10"}');
+
+insert into Employee_Details(E_id,E_name,Address,Project_Id)
+values(1,"Aditya","ABC",1),
+(2,"Rahul","EFG",2),
+(3,"Ramesh","XYZ",3),
+(4,"Kalp","PQR",4),
+(5,"Maahir","MNO",1);
+
+
+select * from Project_Details;
+select * from Employee_Details;
+
+select * from Employee_Details where Project_Id in (select Project_Id from Project_Details where Project_Name="LMS");
+
+select Project_Name,Front_End,Back_End from Project_Details where Project_Id in (select Project_Id from Employee_Details where E_name = "Aditya");
+
+-- select count(*),Project_Name from Project_Details group by Project_Name where Project_Id in (select Project_Id from Employee_Details);
+-- where Project_Id = (select Project_Id from Employee_Details);
+
+select * from Employee_Details where Project_Id in (select Project_Id from Project_Details where
+Front_End="HTML" && Back_End="MYSQL");
+
+
+select Project_Id,ProjectDetail->>'$.title',ProjectDetail->>'$.year' from Project_Details;
+
+select Project_Name,ProjectDetail->>'$.year',ProjectDetail->>'$.Duration' from Project_Details where ProjectDetail->>'$.title'="Doctor App";
+
+select ProjectDetail->>'$.title' from Project_Details where ProjectDetail->>'$.year'="2020";
+
+update Project_Details set ProjectDetail = JSON_INSERT(ProjectDetail,'$.month',"January") where ProjectDetail->>'$.title'="e-nursery";
+
+update Project_Details set ProjectDetail = JSON_REMOVE(ProjectDetail,'$.Duration') where Project_Id=2;
+
+update Project_Details set ProjectDetail = JSON_SET(ProjectDetail,'$.title','E-farming') where ProjectDetail->>'$.title'="e-nursery";
+
+select json_length(ProjectDetail) from Project_Details;
+
+update Project_Details set ProjectDetail = json_array_append(ProjectDetail,'$.title',"e-farmin") where ProjectDetail->>'$.title' = "e-nursery";
+
+
+select json_extract(ProjectDetail,'$.title') from Project_Details;
+
+select json_pretty(ProjectDetail) from Project_Details;
+
+select * from Project_Details;

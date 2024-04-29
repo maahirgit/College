@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Email>
+    <From>abc@gmail.com</From>
+    <To>xyz@gmail.com</To>
+    <Content>
+        <Person>
+        <name>Maahir</name>
+        <age>30</age>
+        </Person>
+        <Excercises>
+            <Excercise>
+                <Topic>Dance</Topic>
+                <Description>blah blah blah....</Description>
+            </Excercise>
+        </Excercises>
+    </Content>
+    <Course>
+        <Name>Bca</Name>
+        <year>2022</year>
+        <Duration>3 years</Duration>
+    </Course>
+</Email>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<STUDENT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="student1.xsd">
+
+	<ROLL_NUMBER> 100 </ROLL_NUMBER>
+	<NAME> Pallavi Joshi </NAME>
+	<MARKS> 80 </MARKS>
+	<RESULT> Distinction </RESULT>
+</STUDENT>

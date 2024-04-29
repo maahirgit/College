@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:simpleType name="contentsType">
+		<xsd:restriction base="xsd:string">
+			<xsd:whiteSpace value="collapse"/>	
+		</xsd:restriction>		
+	</xsd:simpleType>
+
+	<xsd:element name="poem" type="poemType"/>
+		<xsd:complexType name="poemType">
+			<xsd:sequence>
+				<xsd:element name="name" type="xsd:string"/>
+				<xsd:element name="contents" type="contentsType"/>
+			</xsd:sequence>
+		</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<Contacts>
+	<contact>
+		<name>abc</name>
+		<email>xyz</email>
+	</contact>
+	<contact_no>123456789</contact_no>
+	<contact_father>789456123</contact_father>
+</Contacts>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE employee [
+<!ELEMENT employee (shift)>
+<!ELEMENT shift (day|night),salary)>	
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT night (#PCDATA)>
+<!ELEMENT salary ANY>
+]>	
+	<employee>
+		<shift>
+			<day></day>
+			<salary></salary>
+		</shift>
+	
+	</employee>

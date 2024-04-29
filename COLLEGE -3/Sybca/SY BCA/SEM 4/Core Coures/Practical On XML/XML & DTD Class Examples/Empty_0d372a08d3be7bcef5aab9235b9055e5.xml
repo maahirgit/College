@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+	
+<!DOCTYPE student [
+	<!ELEMENT student ((mr|dr|prof|er),name,course,sub)>
+	<!ELEMENT mr EMPTY>
+	<!ELEMENT dr EMPTY>
+	<!ELEMENT prof EMPTY>
+	<!ELEMENT er EMPTY>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT course (#PCDATA)>
+	<!ELEMENT sub (#PCDATA)>  
+	]>
+	<student>
+			<prof/>
+			<name></name>
+			<course></course>	
+			<sub></sub>
+	</student>

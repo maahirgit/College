@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE address SYSTEM "demo_3.dtd">
+
+<address>
+	<street> Stree 1 </street>
+	<region> law garden </region>
+	<postal-code> 380006 </postal-code>
+	<country>Indian</country>
+	<locality> Ellisbridge</locality>
+	
+</address>

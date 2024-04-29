@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BOOKS SYSTEM "demo_7.dtd">
+
+<BOOKS>
+	<BOOK>
+		<BOOK_TITLE> LOOK Homeward, Angle </BOOK_TITLE>
+		<SUB_TITLE></SUB_TITLE>
+		<AUTHOR> Wolfe, Thomas </AUTHOR>
+		<PUB_YEAR>
+			<REPRINT>2012</REPRINT>	
+		</PUB_YEAR>
+	</BOOK>	
+
+	<BOOK>
+		<BOOK_TITLE> Gravity's Rainbow </BOOK_TITLE>
+		<SUB_TITLE></SUB_TITLE>
+		<AUTHOR> Pyncon, Thomas </AUTHOR>
+		<PUB_YEAR>2010
+				<REPRINT>2012</REPRINT>
+				<ISBN></ISBN>
+		</PUB_YEAR>
+	</BOOK>		
+</BOOKS>

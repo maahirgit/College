@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE email [
+	<!ELEMENT email      (message)>
+	<!ELEMENT message    (#PCDATA)>
+	<!ATTLIST message from    CDATA   #IMPLIED>
+	<!ATTLIST message to      CDATA   #REQUIRED>
+	<!ATTLIST message subject CDATA   #FIXED "HELLO">
+
+]>
+<email>
+	<message from="ankit" to="Ajay" subject="where are you"	>
+	IT IS TIME TO HAVE FOOD!
+	</message>
+</email>

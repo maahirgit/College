@@ -1,0 +1,65 @@
+CREATE TABLE productss(product_id INT, product_name varchar(75), price INT,  properties json , specifications json);
+
+
+SELECT product_name,properties->'$.Display' AS phonedisplay, properties->'$.capacity' as newcapacity, properties->'$.camera', properties->'$.sensor', properties->'$.Bluetooth'   FROM productss;
+
+
+SELECT product_name,properties->>'$.Display' AS phonedisplay, properties->>'$.capacity' as newcapacity, properties->>'$.camera', properties->>'$.sensor', properties->>'$.Bluetooth'   FROM productss;
+
+insert into productss values(1,"iphone13",50000,'{"capacity":"128GB","width":"64.2mm","Display":"6.1"}');
+
+update productss set properties = json_set(properties,'$.os','Mac','$.Display','6.5') where product_id =1;
+
+ update productss set properties = JSON_INSERT(properties,'$.Camera','16mp') where id =1;
+
+
+insert into productss values(2,"iphone14",80000,'{"capacity":"512GB","edges":"flat","Display":"6.7","camera":"12mp"}')
+
+insert into productss values(3,"iphone12",80000,'{"capacity":"256GB","weight":"164g","Display":"6.1","camera":"12mp","sensor":"face"}')
+
+
+insert into productss values(4,"iphone11",40000,'{"capacity":"64GB","weight":"194g","Display":"6.1","camera":"10mp","Bluetooth":"5.0"}')
+
+
+insert into productss values(5,"iphone10",35000,'{"Display":"5.0","camera":"8mp","capacity":"32gb"}');
+
+
+
+path operator (->). 
+
+inline path operator (->>)
+
+SELECT product_name,properties->>'$.Display' AS phonedisplay, properties->>'$.capacity' as newcapacity, properties->>'$.camera', properties->>'$.sensor', properties->>'$.Bluetooth'   FROM productss;
+
+
+SELECT product_name,properties->'$.Display' AS phonedisplay FROM productss;  
+
+SELECT product_id, product_name,properties->>'$.Display' AS phonedisplay FROM productss;  
+
+SELECT product_name FROM productss where properties->'$.Display'="6.1";
+
+mysql> SELECT product_name,properties->'$.camera' AS phonedisplay FROM productss where properties->'$.Display'="6.1";
+
+
+SELECT properties->>'$.Display' AS Displayy, count(Properties)  
+FROM productss GROUP BY properties->>'$.Display';
+
+SELECT JSON_EXTRACT(properties, '$.Display') FROM productss;
+
+update productss set properties = JSON_INSERT(properties,'$.Bluetooth','5.0') where product_id =5;
+
+update productss set properties = JSON_Replace(properties ,'$.Bluetooth','15.0') where product_id=5;
+
+delete from productss where json_extract(properties, '$.Display') = '6.1';
+delete from productss where json_extract(properties, '$.Display') = '6.1';
+
+update productss set properties = json_remove(properties,'$.Bluetooth') where product_id =5;
+
+select json_array_append(properties,'$.Bluetooth',"5.0") from events where product_id =5;
+
+  select json_length(properties) from productss where product_id =5;
+
+select json_pretty(properties) from productss where product_id =5;
+
+update productss set properties = JSON_Replace(properties ,'$.capacity','64gb') where product_id = 5;
+

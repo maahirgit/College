@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Student>
+    <StudentName>Maahir Shah</StudentName>
+    <PersonalInfo>
+        <Address>
+            <Street>23,Rajulpark Society</Street>
+            <city>Ahmedabad</city>
+            <State>Gujarat</State>
+            <Zipcode>380005</Zipcode>
+        </Address>
+        <Birthdate>2004-04-03</Birthdate>
+        <Gender>Male</Gender>
+        <Mobileno>9408758585</Mobileno>
+    </PersonalInfo>
+    
+    <Result>
+        <Total>480</Total>
+        <Percentage>90.0</Percentage>
+        <Grade>A</Grade>
+    </Result>
+</Student>

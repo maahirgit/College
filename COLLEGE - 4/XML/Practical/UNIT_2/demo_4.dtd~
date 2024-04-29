@@ -1,0 +1,6 @@
+<!ELEMENT guest (name, purpose, beverage) >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT purpose (#PCDATA) >
+<!ELEMENT beverage (tea | cofee) >
+
+

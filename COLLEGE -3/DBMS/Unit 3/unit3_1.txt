@@ -1,0 +1,99 @@
+////////////////////////////////////////////////////SUB QUERY///////////////////////////////////////////////
+CREATE TABLE DEPARTMENT (
+    Department_ID INT ,
+    Name VARCHAR(50) NOT NULL,
+    Regional_Group VARCHAR(50) NOT NULL
+);
+CREATE TABLE DESIGNATION (
+    Job_ID INT,
+    Fun VARCHAR(50) NOT NULL
+);
+
+INSERT INTO DEPARTMENT (Department_ID, Name, Regional_Group)
+VALUES 
+    (10, 'ACCOUNTING', 'NEW YORK'),
+    (20, 'RESEARCH', 'DALLAS'),
+    (30, 'SALES', 'CHICAGO'),
+    (40, 'OPERATIONS', 'BOSTON');
+    
+    INSERT INTO DESIGNATION (Job_ID, Fun)
+VALUES 
+    (667, 'CLERK'),
+    (668, 'STAFF'),
+    (669, 'ANALYST'),
+    (670, 'SALESPERSON'),
+    (671, 'MANAGER'),
+    (672, 'PRESIDENT');
+
+
+CREATE TABLE EMPLOYEE (Emp_ID int,Fname VARCHAR(50),Lname VARCHAR(50),job_id int,Manager_ID int,Hire_Date date,Salary int,Department_ID int);
+INSERT INTO EMPLOYEE (Emp_ID, Fname, Lname, job_id, Manager_ID, Hire_Date, Salary, Department_ID)
+VALUES 
+    (1, 'SMITH', 'JOHN', 667, 7902, '19841217', 800, 20),
+    (2, 'ALLEN', 'KEVIN', 670, 7698, '19850220', 1600, 10),
+    (3, 'DOYLE', 'JEAN', 668, 7839, '19850404', 2850, 30),
+    (4, 'DENNIS', 'LYNN', 671, 7839,'19850515', 2750, 30),
+    (5, 'BAKER', 'LESLIE', 671, 7839,'19850610', 2200, 40),
+    (6, 'WARK', 'CYNTHIA', 669, 7698, '19850222', 1250, 30);
+    
+    
+    select * from EMPLOYEE;
+    select * from DEPARTMENT;
+    select * from DESIGNATION;
+    
+    -- select Regional_Group from DEPARTMENT;
+    -- select Fname,Lname,Salary from EMPLOYEE;
+    -- Alter table EMPLOYEE rename column  Emp_ID to Id_OF_EMP;
+    -- select * from EMPLOYEE;
+    -- -- select Id_OF_EMP,Lname,Department_ID from EMPLOYEE;
+    
+    -- select Salary,Fname from EMPLOYEE;
+    
+    -- select * from EMPLOYEE where Fname="SMITH";
+    
+    -- select * from employee where department_id=20;
+    
+    -- select * from employee where Salary between 3000 and 4500;
+    
+    -- select * from EMPLOYEE where Department_ID = 20 or Department_ID=30;
+    
+    -- select * from EMPLOYEE where Department_ID not in (10,30);
+    
+    -- select * from EMPLOYEE where Fname like 'L%';
+    
+    -- select Id_OF_EMP,Lname from EMPLOYEE order by Id_OF_EMP;
+    
+    -- update EMPLOYEE set Fname="Revita" where Id_OF_EMP=6;
+    -- select * from EMPLOYEE;
+    
+    
+    -- alter table EMPLOYEE add column city varchar(20);
+    -- select * from EMPLOYEE;
+    
+    -- select * from employee having salary>(select avg(salary) from employee);
+    
+    -- select * from EMPLOYEE where salary = (select max(salary) from employee);
+
+    -- select * from employee where Department_ID in (select Department_ID from DEPARTMENT where Name="RESEARCH");
+    
+    select * from employee where job_id in (select job_id from DESIGNATION where Fun="ANALYST");
+    
+    select * from employee where Department_ID in (select Department_ID from DEPARTMENT where Regional_Group="NEW YORK");
+    
+    select count(*) from employee where Department_ID in (select Department_ID from DEPARTMENT where Name='SALES');
+    
+    update EMPLOYEE set salary = salary+((salary*15)/100) where job_id in (select job_id from DESIGNATION where fun="STAFF");
+    select * from EMPLOYEE;
+    
+    select max(salary) from employee where salary < (select max(salary) from EMPLOYEE);
+    
+    select Hire_Date from EMPLOYEE where job_id in (select job_id from DESIGNATION where fun = "ANALYST");
+    
+    select job_id from EMPLOYEE where salary>=1600;
+    
+    select fun from DESIGNATION where job_id in (select job_id from EMPLOYEE where Fname="Baker");
+    
+    select fun from DESIGNATION where job_id in (select job_id from employee where Manager_ID between 7790 and 7905);
+    
+    select concat(fname,' ',Lname) Full_Name from EMPLOYEE where Department_ID in (select Department_ID from DEPARTMENT where Regional_Group like 'D%');
+    -- select * from EMPLOYEE group by Department_ID where salary > (select avg(salary) from EMPLOYEE group by Department_ID);

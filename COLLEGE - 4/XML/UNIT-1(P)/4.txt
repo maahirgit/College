@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Email>
+    <Message from="abc@gmail.com" to="xyz@gmail.com" subject="Information regarding tommorows meeting">
+    Hello
+    </Message>
+</Email>

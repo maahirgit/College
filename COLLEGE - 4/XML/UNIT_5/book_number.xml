@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl"?>
+<books>
+	<book>	
+	<title> Web technologies </title>
+	<author> Patel Godbole </author>
+	<author> Ray Girish </author>
+	<PRICE> 250 </PRICE>
+	</book>
+
+	<book>	
+	<title> Web technologies </title>
+	<author> Patel Godbole </author>
+	<author> Ray Girish </author>
+	<PRICE> 250 </PRICE>
+	</book>
+
+	<book>	
+	<title> Web technologies </title>
+	<author> Patel Godbole </author>
+	<author> Ray Girish </author>
+	<PRICE> 250 </PRICE>
+	</book>
+</books>

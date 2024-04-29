@@ -1,0 +1,73 @@
+enrollment no:-202100319010115
+Roll No:-B_22
+
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.30 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use sybca;
+Database changed
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+mysql> create table Project_Details
+    -> (Project_Id int primary key , Project_Name varchar(20) , Front_End varchar(20) , Back_End varchar(20) , ProjectDetail json);
+Query OK, 0 rows affected (0.26 sec)
+
+insert into Project_Details value(1,"LMS","HTML","SQL",'{"year":"2021-03-16","title":"e-nursery","duration":10}');
+insert into Project_Details value(2,"BKM","XML","JS",'{"year":"2020-07-24","title":"E-farming","duration":6}');
+insert into Project_Details value(3,"wty","php","sql",'{"year":"2022-05-02","title":"cmc","duration":4}');
+insert into Project_Details value(4,"qer","python","python",'{"year":"2019-01-14","title":"pop","duration":9}');
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+mysql> create table Employee_Details
+    -> (Eid int primary key,Ename varchar(20),Address Varchar(20),Project_Id int,foriegn key(Project_Id) references Project_Details(Project_Id));
+Query OK, 0 rows affected (0.00 sec)
+
+insert into Employee_Details value(1,"Adity","Ahmedabad",1);
+insert into Employee_Details value(2,"Rahul","Banglur",3);
+insert into Employee_Details value(3,"Raj","Banglur",3);
+insert into Employee_Details value(4,"Path","Jaipur",4);
+insert into Employee_Details value(5,"kajal","Punjab",2);
+insert into Employee_Details value(6,"mukesh","Punjab",1);
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Query:-
+
+Q:-1:-Display the Employee details whose project name is “ LMS”
+Ans:-select *from Employee_Details where Project_Name="LMS";
+
+Q:-2:-Display the Project name , front end , back end from the project table where emloyee name is “Aditya”
+Ans:-select Project_Name,Fornt_End,Back_End from Project_Details where Ename="Adity";
+
+Q:-3:-Display the total number of employee according to project wise.
+Ans:-select Project_Name,count(Eid) from Employee_Details group by Eid;
+
+Q:-4:-Display the employee details who is working “HTML” as front end and “MYSQL” as back end.
+Ans:-select *from Employee_Details where Fornt_End="HTML" and Back_End="sql";
+
+Q:-5:-Display the object title and year from the JSON field Project details
+Ans:-select ProjectDetail->>'$.title',ProjectDetail->>'$.year' from Project_Details;
+
+Q:-6:- Display the object title from the JSON field where year will be 2020
+Ans:-select* from Project_Details where year(ProjectDetail->>'$.year')=2020; 
+
+Q:-7:-Add new object month in the JSON field where title is “e-nursery”
+Ans:-update Project_Details set ProjectDetail=JSON_SET(ProjectDetail,'$.month',6) where ProjectDetail->>'$.title'="e-nursery";
+
+Q:-8:-Remove the object duration from the JSON field where project id is 02
+Ans:-update Project_Details set ProjectDetail=JSON_REMOVE(ProjectDetail,'$.duration') where Project_Id=2;
+
+Q:-9:-Update the object title as E-farming where title is e-nursery in the JSON field.
+Ans:-update Project_Details set ProjectDetail=JSON_INSERT(ProjectDetail,'$.title','E-Farming') where ProjectDetail->>'$.title'="e-nursery";
+
+Q:-10:-Display the length of the JSON field.
+Ans:-select json_length(ProjectDetail) from Project_Details;
+
+Q:-11:-Display the title from the JSON field using extract function
+Ans:-select json_extract(ProjectDetail,'$.title') from Project_Details;

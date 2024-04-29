@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<poem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="poem_facet.xsd">
+
+	<name> Mary </name>
+	<contents> had a   little    lamb,      little lamb
+		face was white as show
+
+		everywhere that mary went
+
+
+went Mary          went
+lamb was usre to go!
+
+
+ </contents>
+	
+</poem>

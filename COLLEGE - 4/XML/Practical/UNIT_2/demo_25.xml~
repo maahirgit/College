@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PERSON [
+	<!ELEMENT PERSON ((Mr | Mrs | Ms | Dr)*, EMPLOYEE*)>
+	<!ELEMENT Mr       EMPTY>
+	<!ELEMENT Mrs      EMPTY>
+	<!ELEMENT Ms       EMPTY>
+	<!ELEMENT Dr       EMPTY>
+	<!ELEMENT EMPLOYEE (#PCDATA)>
+	<!ATTLIST EMPLOYEE   marital_status (Married   | Single)  "Single">
+]>
+
+<PERSON>
+	<Mr/>
+	<EMPLOYEE marital_status="Married"> Rahul </EMPLOYEE>
+</PERSON>

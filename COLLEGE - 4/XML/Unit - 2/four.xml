@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Student SYSTEM "four.dtd">
+<Student>
+	<Student_Name>Maahir</Student_Name>
+	<Personal_Info>
+		<Address>1st FF,xyz</Address>
+		<BirthDate>01-01-2004</BirthDate>
+		<Gender><Male>Yes<Female></Gender>
+		<Mobile>9408758428</Mobile>
+	</Personal_Info>
+	<Result>
+		<Total>100</Total>
+		<Percentage>90%</Percentage>
+		<Grade>Fail</Grade>
+	</Result>
+</Student>

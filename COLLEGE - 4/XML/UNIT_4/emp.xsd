@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="EMPLOYEE" type="EmpType"/>
+		
+		<xsd:complexType name="ProjectType">
+			<xsd:sequence>
+				<xsd:element name="NAME" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+			
+		<xsd:complexType name="SubordinateType">
+			<xsd:sequence>
+				<xsd:element name="NAME" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+
+		<xsd:complexType name="EmpType">
+			<xsd:sequence>
+				<xsd:element name="NAME" type="xsd:string"/>
+				<xsd:element name="PROJECT" type="ProjectType" maxOccurs="unbounded"/>
+				<xsd:element name="SUBORDINATE" type="SubordinateType" maxOccurs="unbounded"/>
+				<xsd:element name="DESIGNATION" type="xsd:integer"/>
+				<xsd:element name="SALARY" type="xsd:integer"/>
+			</xsd:sequence>
+		</xsd:complexType>
+</xsd:schema>

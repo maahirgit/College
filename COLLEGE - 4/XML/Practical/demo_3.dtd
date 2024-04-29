@@ -1,0 +1,8 @@
+<!ELEMENT address (street, region, postal-code, locality, country) >
+<!ELEMENT street (#PCDATA) >
+<!ELEMENT region (#PCDATA) >
+<!ELEMENT postal-code (#PCDATA) >
+<!ELEMENT locality (#PCDATA) >
+<!ELEMENT country (#PCDATA) >
+
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="card" type="cardtype"/>
+		<xsd:complexType name="cardtype">
+			<xsd:all>
+				<xsd:element name="card_type" type="xsd:string"/>
+				<xsd:element name="card_number" type="xsd:integer"/>
+				<xsd:element name="card_holder" type="xsd:string"/>
+				<xsd:element name="card_validtill" type="xsd:date"/>
+			</xsd:all>
+		</xsd:complexType>
+</xsd:schema>

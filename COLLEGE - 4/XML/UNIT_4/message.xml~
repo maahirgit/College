@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<catalogEntry>
+	<book>
+		<title> this is book title </title>
+		<isbn> 123065 </isbn>
+		<author>
+			<title> Dr. xyz </title>
+			<lastName> Expert </lastName>
+			<firstName> IMan </firstName>
+		</author>
+	</book>
+</catalogEntry>

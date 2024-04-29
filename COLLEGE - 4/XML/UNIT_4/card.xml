@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<card xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="card.xsd">
+	
+	<card_holder> sonia kapor </card_holder>
+	<card_type> visa </card_type>
+	<card_validtill> 2017-03-30 </card_validtill>
+	<card_number> 1254899 </card_number>
+	
+</card>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Student SYSTEM "six.dtd">
+<Student>
+	<Name>
+		<fname>Maahir</fname>
+		<lname>Shah</lname>
+	</Name>
+	<ID>101</ID>
+	<Plan>
+		<courses year="2022">
+			<course>
+				<name>Bca</name>
+				<shortName>IT</shortName>
+				<record>
+					<Grade>A</Grade>
+					<date>2023-05-15</date>
+				</record>
+			</course>
+		</courses>
+	</Plan>
+</Student>
+
+<!--* is used for zero or more times-->

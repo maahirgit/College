@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<shiporder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="shiporder.xsd" orderid="253896">
+
+	<orderperson nm="abc">
+		Narendra Shah
+	</orderperson>
+
+	<shipto>
+		<name> Rahul Khatri </name>
+		<address> Satellite </address>
+		<city> Ahmedabad </city>
+		<country> India </country>
+	</shipto>
+
+	<item>
+		<title> Laptop </title>
+		<note> Special Discount </note>
+		<quantity> 1 </quantity>
+		<price> 24000 </price>
+	</item>
+
+	<item>
+		<title> Mouse </title>
+		<note> Normal Rate </note>
+		<quantity> 2 </quantity>
+		<price> 250 </price>
+	</item>
+</shiporder>

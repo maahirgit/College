@@ -1,0 +1,7 @@
+<!ELEMENT student (name,course,result+,grade*,per?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT course (#PCDATA)>
+<!ELEMENT result (#PCDATA)>	
+<!ELEMENT grade (#PCDATA)>
+<!ELEMENT per (#PCDATA)>
+
